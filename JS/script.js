@@ -44,14 +44,27 @@ console.log(box.innerHTML);
 let btn = document.querySelector(".btn");                 // ".btn" class thaka button ti k select korbe
 let inputForm = document.querySelector(".inputForm");     // ".inputForm" class thaka input field ti k select korbe
 
-btn.addEventListener("click", () => {                     // Button e click korle bhetorer shob kaj automatic shuru hobe
-    console.log(inputForm.type);                          // Input field er vhetorer type ta (password na text) console e dekhabe
+// btn.addEventListener("click", () => {                     // Button e click korle bhetorer shob kaj automatic shuru hobe
+//     console.log(inputForm.type);                          // Input field er vhetorer type ta (password na text) console e dekhabe
     
-    if (inputForm.type === "password") {                  // Jodi input field er type ta default vabe "password" hoy
-        inputForm.type = "text";                          // Tobe type ta k bodle "text" kore dibe (jate password dekha jay)
-        btn.innerHTML = "Hide";                           // Ebong button er lekha ti bodle "Hide" banay dibe
-    } else {                                              // R jodi type ta password na hoy (mane "text" thake)
-        inputForm.type = "password";                      // Tobe type ta k abar bodle "password" kore dibe (jate password lukiye jay)
-        btn.innerHTML = "Show";                           // Ebong button er lekha ti abar bodle "Show" banay dibe
+//     if (inputForm.type === "password") {                  // Jodi input field er type ta default vabe "password" hoy
+//         inputForm.type = "text";                          // Tobe type ta k bodle "text" kore dibe (jate password dekha jay)
+//         btn.innerHTML = "Hide";                           // Ebong button er lekha ti bodle "Hide" banay dibe
+//     } else {                                              // R jodi type ta password na hoy (mane "text" thake)
+//         inputForm.type = "password";                      // Tobe type ta k abar bodle "password" kore dibe (jate password lukiye jay)
+//         btn.innerHTML = "Show";                           // Ebong button er lekha ti abar bodle "Show" banay dibe
+//     }
+// }); 
+
+btn.addEventListener("mouseover", () => {                     
+    console.log(inputForm.type);                          
+    
+    if (inputForm.type === "password") {                  
+        inputForm.type = "text";                          
+        btn.innerHTML = "Hide";                           
+    } else {                                              
+        inputForm.type = "password";                      
+        btn.innerHTML = "Show";
     }
+                                    
 });                                                       
